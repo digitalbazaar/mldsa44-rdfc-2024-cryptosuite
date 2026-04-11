@@ -120,7 +120,6 @@ const signedCredential = await jsigs.sign(unsignedCredential, {
 });
 
 // results in the following signed VC
-```
 TBD
 ```
 
