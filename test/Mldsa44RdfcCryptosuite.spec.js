@@ -8,14 +8,14 @@ const {purposes: {AssertionProofPurpose}} = jsigs;
 
 import * as MldsaMultikey from '@digitalbazaar/mldsa-multikey';
 import {
+  createSigner,
+  cryptosuite as mldsa44RdfcCryptosuite
+} from '../lib/index.js';
+import {
   credential,
   mldsaMultikeyKeyPair
 } from './mock-data.js';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
-import {
-  createSigner,
-  cryptosuite as mldsa44RdfcCryptosuite
-} from '../lib/index.js';
 
 import {loader} from './documentLoader.js';
 
