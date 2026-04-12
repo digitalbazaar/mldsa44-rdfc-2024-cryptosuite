@@ -18,7 +18,7 @@
     "./lib/sha.js": "./lib/sha-browser.js"
   },
   "dependencies": {
-    "@digitalbazaar/mldsa-multikey": "^1.6.0",
+    "@digitalbazaar/mldsa-multikey": "digitalbazaar/mldsa-multikey#initial",
     "jsonld": "^9.0.0",
     "rdf-canonize": "^5.0.0"
   },
