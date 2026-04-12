@@ -231,7 +231,7 @@ describe('Mldsa44RdfcCryptosuite', () => {
       });
     });
 
-    it.skip('should verify a document', async () => {
+    it('should verify a document', async () => {
       const suite = new DataIntegrityProof({
         cryptosuite: mldsa44RdfcCryptosuite
       });
@@ -244,7 +244,7 @@ describe('Mldsa44RdfcCryptosuite', () => {
       expect(result.verified).to.be.true;
     });
 
-    it.skip('should fail verification if "proofValue" is not string', async () => {
+    it('should fail verification if "proofValue" is not string', async () => {
       const suite = new DataIntegrityProof({
         cryptosuite: mldsa44RdfcCryptosuite
       });
@@ -267,7 +267,7 @@ describe('Mldsa44RdfcCryptosuite', () => {
       );
     });
 
-    it.skip('should fail verification if "proofValue" is not given', async () => {
+    it('should fail verification if "proofValue" is not given', async () => {
       const suite = new DataIntegrityProof({
         cryptosuite: mldsa44RdfcCryptosuite
       });
@@ -290,7 +290,7 @@ describe('Mldsa44RdfcCryptosuite', () => {
       );
     });
 
-    it.skip('should fail verification if proofValue string does not start with "u"',
+    it('should fail verification if proofValue string does not start with "u"',
       async () => {
         const suite = new DataIntegrityProof({
           cryptosuite: mldsa44RdfcCryptosuite
@@ -312,7 +312,7 @@ describe('Mldsa44RdfcCryptosuite', () => {
       }
     );
 
-    it.skip('should fail verification if proof type is not DataIntegrityProof',
+    it('should fail verification if proof type is not DataIntegrityProof',
       async () => {
         const suite = new DataIntegrityProof({
           cryptosuite: mldsa44RdfcCryptosuite
