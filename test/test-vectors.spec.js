@@ -1,7 +1,6 @@
 /*!
  * Copyright (c) 2023-2026 Digital Bazaar, Inc. All rights reserved.
  */
-import * as MldsaMultikey from '@digitalbazaar/mldsa-multikey';
 import {cryptosuite} from '../lib/index.js';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {expect} from 'chai';
@@ -21,12 +20,8 @@ describe('test vectors', () => {
   }
 });
 
-function addTests({nistSecurityLevel, keyMaterial, signedFixture}) {
+function addTests({nistSecurityLevel, signedFixture}) {
   const label = `ML-DSA-44 (NIST Security Level ${nistSecurityLevel})`;
-  let keyPair;
-  before(async () => {
-    keyPair = await MldsaMultikey.from(keyMaterial);
-  });
 
   it(`should verify ${label} signed fixture`, async () => {
     const result = await jsigs.verify(signedFixture, {
