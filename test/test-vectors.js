@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2023-2026 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2023-2026 Digital Bazaar, Inc.
  */
 /* Note: This file contains data generated from the mldsa44-rdfc-2024
 test vectors. */

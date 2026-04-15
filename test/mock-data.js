@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2023-2026 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2023-2026 Digital Bazaar, Inc.
  */
 export const controller = 'https://example.edu/issuers/565049';
 /* eslint-disable max-len */
