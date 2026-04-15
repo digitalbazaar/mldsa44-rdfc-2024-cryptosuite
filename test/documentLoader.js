@@ -17,9 +17,8 @@ export const loader = securityLoader();
 
 const resolver = new CachedResolver();
 const didKeyDriver = didMethodKey.driver();
-// ML-DSA-44 public keys are base64url-encoded with the 'u' multibase prefix;
-// the first 3 chars are 'ukC' for this key set (determined by the multicodec
-// header 0x9024 combined with the first public key byte)
+// ML-DSA-44 public keys use the 'u' multibase prefix; the first 3 chars are
+// 'ukC' for all ML-DSA-44 keys (determined by the multicodec header 0x9024)
 didKeyDriver.use({
   multibaseMultikeyHeader: 'ukC',
   fromMultibase: MldsaMultikey.from
