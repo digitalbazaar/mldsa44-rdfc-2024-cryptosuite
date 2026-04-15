@@ -5,17 +5,14 @@ import {expect} from 'chai';
 
 import jsigs from 'jsonld-signatures';
 const {purposes: {AssertionProofPurpose}} = jsigs;
-
-import * as MldsaMultikey from '@digitalbazaar/mldsa-multikey';
-import {
-  createSigner,
-  cryptosuite as mldsa44RdfcCryptosuite
-} from '../lib/index.js';
 import {
   credential,
   mldsaMultikeyKeyPair
 } from './mock-data.js';
+
+import * as MldsaMultikey from '@digitalbazaar/mldsa-multikey';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
+import {cryptosuite as mldsa44RdfcCryptosuite} from '../lib/index.js';
 
 import {loader} from './documentLoader.js';
 
@@ -78,7 +75,7 @@ describe('Mldsa44RdfcCryptosuite', () => {
       let error;
       try {
         verifier = await mldsa44RdfcCryptosuite.createVerifier({
-          verificationMethod: {...mldsaMultikeyKeyPair}
+          verificationMethod: mldsaMultikeyKeyPair
         });
       } catch(e) {
         error = e;
@@ -116,7 +113,7 @@ describe('Mldsa44RdfcCryptosuite', () => {
       const keyPair = await MldsaMultikey.from({...mldsaMultikeyKeyPair});
       const date = '2026-04-12T21:29:24Z';
       const suite = new DataIntegrityProof({
-        signer: await createSigner({keyPair}), date,
+        signer: keyPair.signer(), date,
         cryptosuite: mldsa44RdfcCryptosuite
       });
 
@@ -141,7 +138,7 @@ describe('Mldsa44RdfcCryptosuite', () => {
       const keyPair = await MldsaMultikey.from({...mldsaMultikeyKeyPair});
       const date = '2026-04-12T21:29:24Z';
       const suite = new DataIntegrityProof({
-        signer: await createSigner({keyPair}), date,
+        signer: keyPair.signer(), date,
         cryptosuite: mldsa44RdfcCryptosuite
       });
 
@@ -167,7 +164,7 @@ describe('Mldsa44RdfcCryptosuite', () => {
       const keyPair = await MldsaMultikey.from({...mldsaMultikeyKeyPair});
       const date = '2026-04-12T21:29:24Z';
       const suite = new DataIntegrityProof({
-        signer: await createSigner({keyPair}), date,
+        signer: keyPair.signer(), date,
         cryptosuite: mldsa44RdfcCryptosuite
       });
 
@@ -220,7 +217,7 @@ describe('Mldsa44RdfcCryptosuite', () => {
       const keyPair = await MldsaMultikey.from({...mldsaMultikeyKeyPair});
       const date = '2026-04-12T21:29:24Z';
       const suite = new DataIntegrityProof({
-        signer: await createSigner({keyPair}), date,
+        signer: keyPair.signer(), date,
         cryptosuite: mldsa44RdfcCryptosuite
       });
 
