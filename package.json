@@ -13,10 +13,6 @@
   "files": [
     "lib/**/*.js"
   ],
-  "browser": {
-    "crypto": false,
-    "./lib/sha.js": "./lib/sha-browser.js"
-  },
   "dependencies": {
     "@digitalbazaar/mldsa-multikey": "digitalbazaar/mldsa-multikey#initial",
     "jsonld": "^9.0.0",
