@@ -91,7 +91,9 @@ describe('Mldsa44RdfcCryptosuite', () => {
     it('should fail to create a verifier w/ unsupported key type', async () => {
       let verifier;
       let error;
-      const keyPair = await MldsaMultikey.from({key: {...mldsaMultikeyKeyPair}});
+      const keyPair = await MldsaMultikey.from({
+        key: {...mldsaMultikeyKeyPair}
+      });
       keyPair.type = 'BadKeyType';
       try {
         verifier = await mldsa44RdfcCryptosuite.createVerifier({
@@ -110,7 +112,9 @@ describe('Mldsa44RdfcCryptosuite', () => {
   describe('sign()', () => {
     it('should sign a document', async () => {
       const unsignedCredential = JSON.parse(JSON.stringify(credential));
-      const keyPair = await MldsaMultikey.from({key: {...mldsaMultikeyKeyPair}});
+      const keyPair = await MldsaMultikey.from({
+        key: {...mldsaMultikeyKeyPair}
+      });
       const date = '2026-04-12T21:29:24Z';
       const suite = new DataIntegrityProof({
         signer: keyPair.signer(), date,
@@ -135,7 +139,9 @@ describe('Mldsa44RdfcCryptosuite', () => {
       const unsignedCredential = JSON.parse(JSON.stringify(credential));
       unsignedCredential.undefinedTerm = 'foo';
 
-      const keyPair = await MldsaMultikey.from({key: {...mldsaMultikeyKeyPair}});
+      const keyPair = await MldsaMultikey.from({
+        key: {...mldsaMultikeyKeyPair}
+      });
       const date = '2026-04-12T21:29:24Z';
       const suite = new DataIntegrityProof({
         signer: keyPair.signer(), date,
@@ -161,7 +167,9 @@ describe('Mldsa44RdfcCryptosuite', () => {
       const unsignedCredential = JSON.parse(JSON.stringify(credential));
       unsignedCredential.type.push('UndefinedType');
 
-      const keyPair = await MldsaMultikey.from({key: {...mldsaMultikeyKeyPair}});
+      const keyPair = await MldsaMultikey.from({
+        key: {...mldsaMultikeyKeyPair}
+      });
       const date = '2026-04-12T21:29:24Z';
       const suite = new DataIntegrityProof({
         signer: keyPair.signer(), date,
@@ -184,7 +192,9 @@ describe('Mldsa44RdfcCryptosuite', () => {
     });
 
     it('should fail to sign with incorrect signer algorithm', async () => {
-      const keyPair = await MldsaMultikey.from({key: {...mldsaMultikeyKeyPair}});
+      const keyPair = await MldsaMultikey.from({
+        key: {...mldsaMultikeyKeyPair}
+      });
       const date = '2026-04-12T21:29:24Z';
       const signer = keyPair.signer();
       signer.algorithm = 'wrong-algorithm';
@@ -214,7 +224,9 @@ describe('Mldsa44RdfcCryptosuite', () => {
     before(async () => {
       const unsignedCredential = JSON.parse(JSON.stringify(credential));
 
-      const keyPair = await MldsaMultikey.from({key: {...mldsaMultikeyKeyPair}});
+      const keyPair = await MldsaMultikey.from({
+        key: {...mldsaMultikeyKeyPair}
+      });
       const date = '2026-04-12T21:29:24Z';
       const suite = new DataIntegrityProof({
         signer: keyPair.signer(), date,
