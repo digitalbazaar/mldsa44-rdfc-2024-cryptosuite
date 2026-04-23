@@ -14,7 +14,7 @@
     "lib/**/*.js"
   ],
   "dependencies": {
-    "@digitalbazaar/mldsa-multikey": "digitalbazaar/mldsa-multikey#initial",
+    "@digitalbazaar/mldsa-multikey": "digitalbazaar/mldsa-multikey#main",
     "jsonld": "^9.0.0",
     "rdf-canonize": "^5.0.0"
   },
