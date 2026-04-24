@@ -44,7 +44,6 @@ describe('Mldsa44RdfcCryptosuite', () => {
 
       expect(error).to.not.exist;
       expect(result).to.exist;
-      /* eslint-disable max-len */
       const expectedResult =
         `<http://example.edu/credentials/1872> ` +
         `<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ` +
@@ -64,7 +63,6 @@ describe('Mldsa44RdfcCryptosuite', () => {
         `<https://example.edu/issuers/565049> .\n` +
         `<https://example.edu/students/alice> ` +
         `<https://schema.org#alumniOf> "Example University" .\n`;
-      /* eslint-enable max-len */
       result.should.equal(expectedResult);
     });
   });

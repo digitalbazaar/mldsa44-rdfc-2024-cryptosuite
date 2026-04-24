@@ -4,9 +4,9 @@
 /* Note: This file contains data generated from the mldsa44-rdfc-2024
 test vectors. */
 
-/* eslint-disable max-len */
-/* eslint-disable quote-props */
-/* eslint-disable quotes */
+/* eslint-disable @stylistic/max-len */
+/* eslint-disable @stylistic/quote-props */
+/* eslint-disable @stylistic/quotes */
 export const mldsaFixtures = [{
   nistSecurityLevel: 2,
   keyMaterial: {
@@ -45,6 +45,6 @@ export const mldsaFixtures = [{
     }
   }
 }];
-/* eslint-enable quotes */
-/* eslint-enable quote-props */
-/* eslint-enable max-len */
+/* eslint-enable @stylistic/quotes */
+/* eslint-enable @stylistic/quote-props */
+/* eslint-enable @stylistic/max-len */
