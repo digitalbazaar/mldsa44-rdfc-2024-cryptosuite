@@ -1,6 +1,6 @@
 # ML-DSA RDFC 2024 Data Integrity Cryptosuite _(@digitalbazaar/mldsa44-rdfc-2024-cryptosuite)_
 
-[![Build status](https://img.shields.io/github/actions/workflow/status/digitalbazaar/mldsa44-rdfc-2024-cryptosuite/main.yml)](https://github.com/digitalbazaar/mldsa44-rdfc-2024-cryptosuite/actions?query=workflow%3A%22Node.js+CI%22)
+[![Build status](https://img.shields.io/github/actions/workflow/status/digitalbazaar/mldsa44-rdfc-2024-cryptosuite/main.yaml)](https://github.com/digitalbazaar/mldsa44-rdfc-2024-cryptosuite/actions/workflows/main.yaml)
 [![Coverage status](https://img.shields.io/codecov/c/github/digitalbazaar/mldsa44-rdfc-2024-cryptosuite)](https://codecov.io/gh/digitalbazaar/mldsa44-rdfc-2024-cryptosuite)
 [![NPM Version](https://img.shields.io/npm/v/@digitalbazaar/mldsa44-rdfc-2024-cryptosuite.svg)](https://npm.im/@digitalbazaar/mldsa44-rdfc-2024-cryptosuite)
 
