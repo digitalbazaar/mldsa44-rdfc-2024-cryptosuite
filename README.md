@@ -32,7 +32,10 @@ TBD
 
 ## Install
 
-- Browsers and Node.js 22+ are supported.
+This software requires and supports maintained recent versions of Node.js and
+browsers. Updates may remove support for older unmaintained platform versions.
+Please use dependency version lock files and testing to ensure compatibility
+with this software.
 
 To install from NPM:
 
