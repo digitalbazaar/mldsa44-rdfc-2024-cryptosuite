@@ -39,13 +39,13 @@ with this software.
 
 To install from NPM:
 
-```
+```sh
 npm install @digitalbazaar/mldsa44-rdfc-2024-cryptosuite
 ```
 
 To install locally (for development):
 
-```
+```sh
 git clone https://github.com/digitalbazaar/mldsa44-rdfc-2024-cryptosuite.git
 cd mldsa44-rdfc-2024-cryptosuite
 npm install
